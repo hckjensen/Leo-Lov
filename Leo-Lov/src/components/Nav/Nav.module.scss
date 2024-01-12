@@ -1,0 +1,51 @@
+@use "../../styles/_variables" as vars;
+
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-shrink: 0;
+  height: 58px;
+  padding-left: 50px;
+  list-style: none;
+
+  line-height: normal;
+  color: vars.$blue;
+  background-color: vars.$white;
+  outline: vars.$blue 7px solid;
+  font-family: vars.$font-family-inter;
+
+  text-transform: capitalize;
+
+  li {
+    cursor: pointer;
+    // transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    border-left: vars.$blue 1px solid;
+    padding: 0 0.4rem;
+
+    &:first-child {
+      border-left: none;
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      color: vars.$blue;
+      font-size: 20px;
+      transition: transform 0.2s ease-in-out;
+
+      &:not(.active):hover {
+        transform: scale(1.2);
+      }
+    }
+
+    a.active {
+      font-weight: bold;
+
+      text-decoration: underline;
+      transform: scale(1.2);
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+}

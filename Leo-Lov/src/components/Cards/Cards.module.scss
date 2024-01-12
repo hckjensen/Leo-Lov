@@ -1,0 +1,75 @@
+@use "../../styles/_variables" as vars;
+
+@keyframes move-to-center {
+    0% {
+
+        transform: scale(1);
+        z-index: 1000;
+    }
+
+    100% {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.2);
+        z-index: 1000;
+    }
+}
+
+
+.card {
+
+    margin-top: -100px;
+    z-index: 888;
+    width: 350px;
+    height: 400px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.25);
+    padding: 40px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:not(.animate):hover {
+        transform: scale(1.1);
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    h3 {
+        margin-top: 45px;
+        margin-bottom: 64px;
+        font-size: vars.$font-lg;
+        font-family: vars.$font-family-jura;
+        color: vars.$blue;
+        text-align: center;
+
+    }
+
+    p {
+
+        font-size: vars.$font-md;
+        font-family: vars.$font-family-inter;
+    }
+}
+
+.animate {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    animation: move-to-center 0.3s forwards;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}

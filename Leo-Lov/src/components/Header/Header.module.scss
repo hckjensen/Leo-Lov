@@ -1,0 +1,57 @@
+@use "../../styles/_variables" as vars;
+
+.header {
+    position: relative;
+    height: 90svh;
+    background-image: url("../../assets/images/headerbg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.25);
+
+    .container {
+
+        position: absolute;
+        top: 25%;
+        left: 65%;
+        transform: translate(-50%, -50%);
+
+        h1 {
+            display: block;
+            font-size: vars.$font-header;
+
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-family: vars.$font-family-jura;
+            text-transform: capitalize;
+            text-align: left;
+            padding: 0;
+            margin: 0;
+
+
+
+        }
+
+
+
+        p {
+            padding-left: 10px;
+            font-family: vars.$font-family-inter;
+            font-size: vars.$font-sm;
+            color: vars.$white;
+            text-transform: initial;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+    }
+
+    .firstPart {
+        color: vars.$blue;
+    }
+
+    .secondPart {
+        color: white; // Change to the color you want for '-Lov'
+    }
+
+
+}
