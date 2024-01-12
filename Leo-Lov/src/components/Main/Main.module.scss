@@ -1,5 +1,28 @@
+@use "../../styles/_variables" as vars;
+
 .cardWrapper {
     display: flex;
     justify-content: center;
     gap: 5rem;
+}
+
+
+
+
+.sectionWrapper>section:nth-child(2) {
+    direction: rtl;
+
+    article {
+
+        border: 8px solid vars.$blue-dark;
+
+    }
+
+    picture {
+        border-right: none;
+    }
+}
+
+.sectionWrapper>section:nth-child(2)>* {
+    direction: ltr;
 }

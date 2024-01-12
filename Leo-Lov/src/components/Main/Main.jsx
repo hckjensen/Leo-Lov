@@ -1,5 +1,13 @@
 import Card from "../Cards/Cards";
+import Section from "../Section/Section";
+import Footer from "../Footer/Footer";
 import styles from './Main.module.scss';
+
+import Money from '../../assets/images/money.jpg';
+import Building from '../../assets/images/building.jpg';
+import FB from '../../assets/images/facebook.svg';
+import IN from '../../assets/images/linkedin.svg';
+
 
 const Main = () => {
     const cards = [
@@ -21,6 +29,63 @@ const Main = () => {
         }
     ]
 
+    const midSections = [
+        {
+            heading: "Intet problem",
+            text: "Leo-lov har altid været det bedste advokatfirma i verden. Der er simpelthen ingen der kan måle sig med os. Vi kan løse alle problemer så længe du har penge. Hvis du mod alt forventning skulle oplevel at støde på et retsligt problem som leo-lov ikke kan løse får du halvdelen af beløbet igen.",
+            text2: "Det er sådan vi har skabt en forretning der ikke kan andet end at vokse!",
+            image: Money
+
+
+
+        },
+        {
+            heading: "her bor vi",
+            text: "Leo-lov har altid været det bedste advokatfirma i verden. Der er simpelthen ingen der kan måle sig med os. Vi kan løse alle problemer så længe du har penge. Hvis du mod alt forventning skulle oplevel at støde på et retsligt problem som leo-lov ikke kan løse får du halvdelen af beløbet igen.",
+            text2: "Det er sådan vi har skabt en forretning der ikke kan andet end at vokse!",
+            image: Building
+        }
+    ]
+
+    const footerSections = [
+        {
+            header: "Addresse",
+            subheader: "Find os her:",
+            links: [
+                { text: "Vestervænget 232, 30.sal" },
+                { text: "6574 Øster Nørup" },
+                { text: "Danmark" },
+
+
+            ]
+        },
+        {
+            header: "Kontakt",
+            subheader: "Kontakt os her:",
+            links: [
+                { text: "email@email.dk" },
+                { text: "Tlf: 0192 3023" },
+
+            ],
+        },
+        {
+            header: "Politik",
+            subheader: "Vores politikker:",
+            links: [
+                { text: "Privatpolitik" },
+                { text: "Cookiepolitik" },
+                { text: "Generalle betingelse" },
+            ],
+        },
+        {
+            header: "Sociale medier",
+            icons: [
+                { src: FB, alt: "facebook" },
+                { src: IN, alt: "linkedin" },
+            ],
+        },
+    ];
+
     return (
         <>
             <div className={styles.cardWrapper}>
@@ -28,6 +93,13 @@ const Main = () => {
                     <Card key={index} card={card} />
                 ))}
             </div>
+            <div className={styles.sectionWrapper}>
+                {midSections.map((section, index) => (
+                    <Section key={index} section={section} />
+                ))}
+            </div>
+            <Footer sections={footerSections} />
+
         </>
     )
 }

@@ -1,0 +1,39 @@
+@use "../../styles/_variables" as vars;
+
+
+.footer {
+    height: 300px;
+    margin-top: 80px;
+    background-color: vars.$blue-dark;
+    color: white;
+
+    .contentWrapper {
+        display: flex;
+        justify-content: space-around;
+        margin: 0 170px;
+        padding-top: 60px;
+    }
+
+
+    h4 {
+        font-size: vars.$font-md;
+        font-family: vars.$font-family-jura;
+        margin: 20px 0;
+    }
+
+    h3 {
+        font-size: vars.$font-lg;
+        font-family: vars.$font-family-jura;
+    }
+
+    p {
+        font-size: vars.$font-md;
+        font-family: vars.$font-family-inter;
+    }
+}
+
+.footer img {
+    filter: invert(1);
+    margin-top: 50px;
+    margin-right: 20px;
+}
