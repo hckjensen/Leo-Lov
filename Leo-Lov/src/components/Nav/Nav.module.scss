@@ -1,5 +1,47 @@
 @use "../../styles/_variables" as vars;
 
+
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 2%;
+  right: 2%;
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+
+
+
+  .line {
+    display: none;
+    width: 40px;
+    height: 5px;
+    background-color: vars.$blue;
+    outline: white 1px solid;
+    border-radius: 5px;
+    margin: 3px;
+
+  }
+
+  @media (max-width: 850px) {
+    display: flex;
+
+    .line {
+      display: block;
+    }
+
+  }
+
+  @media (max-width: 500px) {
+    display: flex;
+
+    .line {
+      display: block;
+    }
+
+  }
+}
+
 .navbar {
   display: flex;
   justify-content: flex-start;
@@ -8,18 +50,17 @@
   height: 58px;
   padding-left: 70px;
   list-style: none;
-
   line-height: normal;
   color: vars.$blue;
   background-color: vars.$white;
-  outline: vars.$blue 7px solid;
+  outline: vars.$blue 4px solid;
   font-family: vars.$font-family-inter;
-
   text-transform: capitalize;
+
+
 
   li {
     cursor: pointer;
-    // transition: all 0.2s ease-in-out;
     text-decoration: none;
     border-left: vars.$blue 1px solid;
     padding: 0 0.6rem;
@@ -41,11 +82,67 @@
     }
 
     a.active {
-
-
       text-decoration: underline;
       transform: scale(1.1);
       transition: transform 0.2s ease-in-out;
     }
+
+
   }
+
+
+  @media (max-width: 850px) {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    flex-direction: column;
+    height: auto;
+    z-index: 9999;
+    padding-left: 0;
+
+    li {
+      border-left: none;
+
+      padding: 1rem 0;
+
+      text-align: center;
+
+      a {
+        font-size: 24px;
+      }
+    }
+
+    &.open {
+      display: block;
+    }
+  }
+
+
+  @media (max-width: 500px) {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    flex-direction: column;
+    height: auto;
+    z-index: 9999;
+    padding-left: 0;
+
+    li {
+      border-left: none;
+
+      padding: 1rem 0;
+
+      text-align: center;
+
+      a {
+        font-size: 24px;
+      }
+    }
+
+    &.open {
+      display: block;
+    }
+  }
+
+
 }

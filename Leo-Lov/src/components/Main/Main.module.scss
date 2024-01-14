@@ -4,6 +4,41 @@
     display: flex;
     justify-content: center;
     gap: 5rem;
+
+
+    @media screen and (max-width: 1200px) {
+        gap: 1.3rem;
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: 850px) {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 30px;
+
+    }
+
+    @media (max-width: 500px) {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 30px;
+
+    }
+
+
+
+
+
 }
 
 
@@ -16,6 +51,18 @@
 
         border: 8px solid vars.$blue-dark;
 
+        @media screen and (max-width: 500px) {
+            border: none;
+
+        }
+
+        @media screen and (max-width: 850px) {
+            border: none;
+
+        }
+
+        @media screen and (max-width: 1200px) {}
+
     }
 
     picture {
@@ -25,4 +72,16 @@
 
 .sectionWrapper>section:nth-child(2)>* {
     direction: ltr;
+
+    @media screen and (max-width: 500px) {
+        border: none;
+
+    }
+
+    @media screen and (max-width: 850px) {
+        border: none;
+
+    }
+
+    @media screen and (max-width: 1200px) {}
 }

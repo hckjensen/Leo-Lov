@@ -24,7 +24,7 @@ const Card = ({ card }) => {
                 onClick={handleClick}
             >
                 <h3>{card.title}</h3>
-                <p>{card.text}</p>
+                <p className={isOpen ? styles.showInModal : ''}>{card.text}</p>
             </div>
 
             {isOpen && (

@@ -1,8 +1,16 @@
-# React + Vite
+Til responsivitet er der taget udgangspunkt i iPhone 14 og 12 og iPad air(både stående og liggende) 
+hhv. 500, 850, 1200 px max-width
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Så først vi skulle skrive arbejds process nu jeg skulle til at aflevere, så skal gøre mit bedste
 
-Currently, two official plugins are available:
+Ifht. process startede jeg med at lave homepage til desktop, ud fra udleveret design.
+Derefter lavede jeg routes og componenter til alle pages.
+Til sidst lavede jeg siden responsiv til de nævnte skærmstørrelser.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Jeg synes overordnet, at det giver god mening. Jeg tror, at det, som jeg brugte længst tid på, var media queries og få cards modallen til at fungere ordenligt.
+
+Det gør det selvfølgelig lidt nemmere med AI, især når det kommer til hooks/funktioner.
+
+Synes generelt, at det har været et givende projekt, med en masse "aha"-momenter. 
+
+
