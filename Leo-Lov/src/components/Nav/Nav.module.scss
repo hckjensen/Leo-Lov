@@ -6,7 +6,7 @@
   align-items: center;
   flex-shrink: 0;
   height: 58px;
-  padding-left: 50px;
+  padding-left: 70px;
   list-style: none;
 
   line-height: normal;
@@ -22,7 +22,7 @@
     // transition: all 0.2s ease-in-out;
     text-decoration: none;
     border-left: vars.$blue 1px solid;
-    padding: 0 0.4rem;
+    padding: 0 0.6rem;
 
     &:first-child {
       border-left: none;
@@ -36,15 +36,15 @@
       transition: transform 0.2s ease-in-out;
 
       &:not(.active):hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
       }
     }
 
     a.active {
-      font-weight: bold;
+
 
       text-decoration: underline;
-      transform: scale(1.2);
+      transform: scale(1.1);
       transition: transform 0.2s ease-in-out;
     }
   }

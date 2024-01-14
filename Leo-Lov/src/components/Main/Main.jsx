@@ -1,12 +1,10 @@
 import Card from "../Cards/Cards";
 import Section from "../Section/Section";
-import Footer from "../Footer/Footer";
 import styles from './Main.module.scss';
 
 import Money from '../../assets/images/money.jpg';
 import Building from '../../assets/images/building.jpg';
-import FB from '../../assets/images/facebook.svg';
-import IN from '../../assets/images/linkedin.svg';
+
 
 
 const Main = () => {
@@ -47,44 +45,7 @@ const Main = () => {
         }
     ]
 
-    const footerSections = [
-        {
-            header: "Addresse",
-            subheader: "Find os her:",
-            links: [
-                { text: "Vestervænget 232, 30.sal" },
-                { text: "6574 Øster Nørup" },
-                { text: "Danmark" },
 
-
-            ]
-        },
-        {
-            header: "Kontakt",
-            subheader: "Kontakt os her:",
-            links: [
-                { text: "email@email.dk" },
-                { text: "Tlf: 0192 3023" },
-
-            ],
-        },
-        {
-            header: "Politik",
-            subheader: "Vores politikker:",
-            links: [
-                { text: "Privatpolitik" },
-                { text: "Cookiepolitik" },
-                { text: "Generalle betingelse" },
-            ],
-        },
-        {
-            header: "Sociale medier",
-            icons: [
-                { src: FB, alt: "facebook" },
-                { src: IN, alt: "linkedin" },
-            ],
-        },
-    ];
 
     return (
         <>
@@ -98,7 +59,7 @@ const Main = () => {
                     <Section key={index} section={section} />
                 ))}
             </div>
-            <Footer sections={footerSections} />
+
 
         </>
     )

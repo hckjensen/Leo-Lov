@@ -1,0 +1,63 @@
+@use "../../styles/_variables" as vars;
+
+
+
+
+.lawyerSection {
+    margin-top: 40px;
+
+    h1 {
+        text-align: center;
+        font-size: vars.$font-xl;
+        font-family: vars.$font-family-jura;
+        color: vars.$blue;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 auto;
+        margin-top: 100px;
+
+        .card {
+            margin: 0 auto;
+            margin-bottom: 100px;
+            z-index: 888;
+            width: 500px;
+            height: auto;
+            border-radius: 8px;
+            background: #FFF;
+            box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.25);
+            border: 3px solid vars.$blue-dark;
+            padding: 40px;
+
+
+            img {
+                width: 150px;
+                height: 150px;
+                border: 3px solid vars.$blue-dark;
+
+            }
+
+
+
+            h3 {
+                margin-top: 45px;
+                margin-bottom: 64px;
+                font-size: vars.$font-lg;
+                font-family: vars.$font-family-jura;
+                color: vars.$blue;
+
+
+            }
+
+            p {
+                margin-top: 20px;
+                font-size: vars.$font-md;
+                font-family: vars.$font-family-inter;
+            }
+        }
+
+    }
+
+}

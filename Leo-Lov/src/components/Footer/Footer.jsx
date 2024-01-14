@@ -1,7 +1,48 @@
 import styles from './Footer.module.scss';
 import PropTypes from 'prop-types';
+import FB from '../../assets/images/facebook.svg';
+import IN from '../../assets/images/linkedin.svg';
 
-const Footer = ({ sections }) => {
+const Footer = () => {
+
+    const sections = [
+        {
+            header: "Addresse",
+            subheader: "Find os her:",
+            links: [
+                { text: "Vestervænget 232, 30.sal" },
+                { text: "6574 Øster Nørup" },
+                { text: "Danmark" },
+
+
+            ]
+        },
+        {
+            header: "Kontakt",
+            subheader: "Kontakt os her:",
+            links: [
+                { text: "email@email.dk" },
+                { text: "Tlf: 0192 3023" },
+
+            ],
+        },
+        {
+            header: "Politik",
+            subheader: "Vores politikker:",
+            links: [
+                { text: "Privatpolitik" },
+                { text: "Cookiepolitik" },
+                { text: "Generalle betingelse" },
+            ],
+        },
+        {
+            header: "Sociale medier",
+            icons: [
+                { src: FB, alt: "facebook" },
+                { src: IN, alt: "linkedin" },
+            ],
+        },
+    ];
     return (
         <footer className={styles.footer}>
             <div className={styles.contentWrapper}>

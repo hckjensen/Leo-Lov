@@ -26,7 +26,19 @@ SubHeader.propTypes = {
 
 
 
-const Header = ({ heading }) => {
+const Header = ({ heading, isHomePage }) => {
+
+    const headerStyle = {
+        height: isHomePage ? '90svh' : '70vh',
+
+    };
+
+    const navItems = [
+        { path: "/", name: 'Hjem' },
+        { path: "/advokaterne", name: 'Advokaterne' },
+        { path: "/om-os", name: 'Om LeoLov' },
+        { path: "/kontakt", name: 'Kontakt' },
+    ]
 
     const [firstPart, secondPart] = heading.split('-')
 
@@ -34,13 +46,8 @@ const Header = ({ heading }) => {
 
     return (
         <>
-            <div className={styles.header}>
-                <Nav items={[
-                    { name: 'Hjem' },
-                    { name: 'Advokaterne' },
-                    { name: 'Om LeoLov' },
-                    { name: 'Kontakt' },
-                ]} />
+            <header className={styles.header} style={headerStyle}>
+                <Nav items={navItems} />
                 <div className={styles.container}>
                     <h1>
                         <span className={styles.firstPart}>{firstPart}</span>
@@ -48,7 +55,7 @@ const Header = ({ heading }) => {
                     </h1>
                     <p>{subHeadingText}</p>
                 </div>
-            </div>
+            </header>
 
 
         </>
@@ -58,8 +65,13 @@ const Header = ({ heading }) => {
 
 
 Header.propTypes = {
-    heading: PropTypes.string.isRequired
+    heading: PropTypes.string.isRequired,
+    isHomePage: PropTypes.bool.isRequired,
 
+};
+
+Header.defaultProps = {
+    isHomePage: false,
 };
 
 export default Header;

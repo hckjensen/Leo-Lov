@@ -1,17 +1,17 @@
 import Header from '../../components/Header/Header'
-import Main from '../../components/Main/Main'
+
 import Footer from '../../components/Footer/Footer'
 
-const Homepage = () => {
+const ContactPage = () => {
 
 
     return (
         <>
-            <Header heading='Leo-Lov' isHomePage={true} />
-            <Main />
+            <Header heading='Leo-lov' />
+
             <Footer />
         </>
     )
 };
 
-export default Homepage;
+export default ContactPage;

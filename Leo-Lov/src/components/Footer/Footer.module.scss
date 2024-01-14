@@ -29,6 +29,12 @@
     p {
         font-size: vars.$font-md;
         font-family: vars.$font-family-inter;
+        cursor: pointer;
+        line-height: 25px;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 

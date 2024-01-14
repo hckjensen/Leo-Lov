@@ -1,0 +1,22 @@
+@use "../../styles/_variables" as vars;
+
+.about {
+    margin: 40px 500px;
+
+
+    p {
+        margin-top: 30px;
+    }
+
+
+    h3 {
+        font-size: vars.$font-xl;
+        font-family: vars.$font-family-jura;
+        color: vars.$blue;
+        text-transform: uppercase;
+        text-align: center;
+        width: 100%;
+        padding: 0;
+        margin: 30px 0;
+    }
+}
