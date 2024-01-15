@@ -31,6 +31,7 @@
     padding: 40px;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
+    overflow: hidden;
 
     &:not(.animate):hover {
         transform: scale(1.1);
