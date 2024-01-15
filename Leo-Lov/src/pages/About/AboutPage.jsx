@@ -2,8 +2,11 @@ import Header from '../../components/Header/Header'
 
 import Footer from '../../components/Footer/Footer'
 import AboutSection from '../../components/About/About';
+import { useEffect } from 'react';
 
 const AboutPage = () => {
+
+    useEffect(() => { document.title = 'Om os | Leo Lov' }, []);
 
     const content = {
         html: (
